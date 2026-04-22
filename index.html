@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Invitation | Naveen & Rakshitha</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Falling Rose Petals -->
+    <div id="petals-container"></div>
+
+    <!-- YouTube Player (Hidden) -->
+    <div id="player"></div>
+
+    <!-- Splash / Intro Screen -->
+    <div id="intro-screen" class="intro-screen">
+        <div class="intro-content">
+            <h2 class="cursive-text gold-text animate-up">You Are Invited</h2>
+            <h1 class="names gold-text animate-up">Naveen <span class="ampersand">&</span> Rakshitha</h1>
+            <div class="divider animate-up"></div>
+            <button id="open-invitation" class="btn-primary animate-up">OPEN INVITATION</button>
+            <p class="tap-hint gold-text animate-up">Tap to begin the celebration</p>
+        </div>
+    </div>
+
+    <!-- Main Content (Hidden Initially) -->
+    <div id="main-content" class="main-content hidden">
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-content glass-container" style="padding: 40px; max-width: 800px;">
+                <p class="cursive-text">Together with our families</p>
+                <h2 class="serif-text">WE INVITE YOU TO CELEBRATE OUR WEDDING</h2>
+                <h1 class="names">Naveen & Rakshitha</h1>
+                <div class="date-container">
+                    <div class="date-box">
+                        <span class="day">MONDAY</span>
+                        <span class="date">MAY 11</span>
+                        <span class="year">2026</span>
+                    </div>
+                </div>
+                <div class="venue-brief">
+                    <p class="serif-text">Gundi Mahadevappa Kalyana Mantapa, Davanagere</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Story -->
+        <section id="story" class="section-padding glass-container">
+            <h2 class="cursive-text text-center gold-text">Our Story</h2>
+            <div class="story-container">
+                <div class="couple-story-flex">
+                    <div class="profile-card groom glass-card" style="padding: 20px;">
+                        <div class="img-wrapper">
+                            <img src="images/groom.jpg" alt="Naveen">
+                        </div>
+                        <h3 class="cursive-text">Naveen</h3>
+                        <p class="serif-text italic quote">"The moment I saw her, I knew my search was over."</p>
+                    </div>
+                    
+                    <div class="story-divider">
+                        <i class="fa-solid fa-heart gold-text"></i>
+                    </div>
+                    
+                    <div class="profile-card bride glass-card" style="padding: 20px;">
+                        <div class="img-wrapper">
+                            <img src="images/bride.jpg" alt="Rakshitha">
+                        </div>
+                        <h3 class="cursive-text">Rakshitha</h3>
+                        <p class="serif-text italic quote">"In him, I found my love, my best friend, and my home."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Families -->
+        <section id="families" class="section-padding glass-container">
+            <h2 class="cursive-text text-center gold-text">Our Families</h2>
+            <div class="story-container">
+                <div class="couple-story-flex">
+                    <div class="profile-card groom-parents glass-card" style="padding: 20px;">
+                        <h3 class="serif-text gold-text">Groom's Parents</h3>
+                        <p class="cursive-text" style="font-size: 2.2rem;">Nagaraju & Kalavathi</p>
+                    </div>
+                    
+                    <div class="story-divider">
+                        <i class="fa-solid fa-hands-praying gold-text"></i>
+                    </div>
+                    
+                    <div class="profile-card bride-parents glass-card" style="padding: 20px;">
+                        <h3 class="serif-text gold-text">Bride's Parents</h3>
+                        <p class="cursive-text" style="font-size: 2.2rem;">Rudresh & Savitha</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location Section -->
+        <section id="location" class="section-padding bg-cream glass-container">
+            <h2 class="cursive-text text-center gold-text">Wedding Venue</h2>
+            <div class="location-container text-center">
+                <div class="map-wrapper">
+                    <img src="images/location.jpg" alt="Venue Map" class="map-img">
+                </div>
+                <div class="location-info">
+                    <h3 class="serif-text">Gundi Mahadevappa Kalyana Mantapa</h3>
+                    <p>Davanagere, Karnataka</p>
+                    <a href="https://maps.app.goo.gl/FbDjU9mg27rEmgq66?g_st=aw" target="_blank" class="btn-primary btn-highlight" style="display: inline-block; text-decoration: none; margin-top: 20px;">Click To Destination</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Events Section -->
+        <section id="events" class="section-padding bg-cream glass-container">
+            <h2 class="cursive-text text-center gold-text">Wedding Events</h2>
+            <div class="events-grid">
+                <div class="event-card glass-card">
+                    <i class="fa-solid fa-ring gold-text"></i>
+                    <h3>THE ENGAGEMENT</h3>
+                    <p>Sunday, May 10, 2026</p>
+                    <p>6:00 PM onwards</p>
+                </div>
+                <div class="event-card highlight glass-card">
+                    <i class="fa-solid fa-heart gold-text"></i>
+                    <h3>THE WEDDING</h3>
+                    <p>Monday, May 11, 2026</p>
+                    <p>10:00 AM - Muhurtham</p>
+                    <p class="venue-detail">Gundi Mahadevappa Kalyana Mantapa, Davanagere</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <h3 class="names">#NaveenWedsRakshitha</h3>
+            <p>We look forward to seeing you!</p>
+            <p style="margin-top: 30px; font-size: 0.9rem; opacity: 1; letter-spacing: 3px; color: var(--gold); font-weight: 900; text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);">DESIGNED WITH LOVE BY DARSHAN AND KIRAN</p>
+        </footer>
+    </div>
+
+    <!-- GSAP for Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

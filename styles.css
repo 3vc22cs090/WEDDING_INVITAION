@@ -1,0 +1,392 @@
+:root {
+    --royal-maroon: #5D0E11;
+    --gold: #D4AF37;
+    --cream: #FFFBCC;
+    --white: #ffffff;
+    --text-dark: #333333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    color: var(--text-dark);
+    overflow-x: hidden;
+    background: url('images/bg.png') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+/* Glassmorphism Classes */
+.glass-container {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+    background: rgba(255, 255, 255, 0.35);
+    transform: translateY(-5px);
+}
+
+.hidden {
+    display: none;
+}
+
+/* Typography */
+.cursive-text {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5rem;
+}
+
+.serif-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.names {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+.gold-text {
+    color: var(--gold);
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Intro Screen */
+.intro-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: url('images/bg.png') no-repeat center center;
+    background-size: cover;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.intro-content {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(15px);
+    border: 2px solid var(--gold);
+    padding: 60px 40px;
+    max-width: 600px;
+    width: 90%;
+    position: relative;
+    border-radius: 20px;
+}
+
+.divider {
+    width: 2px;
+    height: 100px;
+    background-color: var(--gold);
+    margin: 30px auto;
+}
+
+.btn-primary {
+    background: transparent;
+    border: 2px solid var(--gold);
+    color: var(--gold);
+    padding: 15px 30px;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 20px 0;
+}
+
+.btn-primary:hover {
+    background-color: var(--gold);
+    color: var(--royal-maroon);
+}
+
+.tap-hint {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    margin-top: 20px;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: transparent;
+    position: relative;
+}
+
+.hero-content {
+    padding: 20px;
+}
+
+.date-container {
+    margin-top: 40px;
+}
+
+.date-box {
+    border-top: 1px solid var(--gold);
+    border-bottom: 1px solid var(--gold);
+    padding: 20px 0;
+    display: inline-block;
+    min-width: 300px;
+}
+
+.day, .year {
+    display: block;
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    color: var(--gold);
+}
+
+.date {
+    display: block;
+    font-size: 3rem;
+    font-family: 'Playfair Display', serif;
+    margin: 10px 0;
+}
+
+/* Sections */
+.section-padding {
+    padding: 80px 20px;
+    margin: 40px auto;
+    max-width: 1100px;
+}
+
+.bg-cream {
+    /* Keeping class for specificity but applying glass */
+    background: rgba(255, 251, 204, 0.15) !important;
+}
+
+.story-container {
+    max-width: 900px;
+    margin: 40px auto;
+    text-align: center;
+    line-height: 1.8;
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 60px auto;
+}
+
+.event-card {
+    padding: 40px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-10px);
+}
+
+.event-card i {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.event-card h3 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 15px;
+}
+
+.highlight {
+    background-color: var(--royal-maroon);
+    color: var(--gold);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--royal-maroon);
+    color: var(--gold);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* Animations */
+.animate-up {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+@media (max-width: 768px) {
+    .names {
+        font-size: 2.5rem;
+    }
+    .cursive-text {
+        font-size: 2rem;
+    }
+}
+
+/* Our Story Details */
+.couple-story-flex {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    margin: 40px auto;
+}
+
+.profile-card {
+    flex: 1;
+    max-width: 300px;
+    text-align: center;
+}
+
+.img-wrapper {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 20px;
+    border: 5px solid var(--white);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1), 0 0 0 8px #eee;
+    transition: all 0.5s ease;
+}
+
+.img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.profile-card:hover .img-wrapper {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15), 0 0 0 10px var(--gold);
+}
+
+.profile-card:hover .img-wrapper img {
+    transform: scale(1.1);
+}
+
+.story-divider {
+    display: flex;
+    align-self: center;
+    font-size: 2rem;
+    padding-bottom: 60px;
+}
+
+.quote {
+    font-size: 1.1rem;
+    margin-top: 15px;
+    color: #666;
+    line-height: 1.6;
+    padding: 0 10px;
+}
+
+@media (max-width: 768px) {
+    .couple-story-flex {
+        flex-direction: column;
+        align-items: center;
+        gap: 60px;
+    }
+    
+    .story-divider {
+        display: none;
+    }
+}
+
+/* Location Section */
+.location-container {
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+.map-wrapper {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    border: 8px solid var(--white);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.map-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.map-wrapper:hover .map-img {
+    transform: scale(1.05);
+}
+
+.location-info h3 {
+    margin-bottom: 10px;
+}
+
+.location-info p {
+    color: var(--royal-maroon);
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+/* Highlighted Button */
+.btn-highlight {
+    background-color: var(--gold) !important;
+    color: var(--royal-maroon) !important;
+    font-weight: bold !important;
+    box-shadow: 0 0 15px var(--gold);
+    animation: pulse-gold 2s infinite;
+    transform: scale(1.05);
+}
+
+@keyframes pulse-gold {
+    0% { transform: scale(1.05); box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7); }
+    70% { transform: scale(1.1); box-shadow: 0 0 0 15px rgba(212, 175, 55, 0); }
+    100% { transform: scale(1.05); box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+}
+
+/* Petal Animation */
+#petals-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 999;
+    overflow: hidden;
+}
+
+.petal {
+    position: absolute;
+    background-image: url('images/petal.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+}
