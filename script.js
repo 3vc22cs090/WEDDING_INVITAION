@@ -77,18 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
         isAutoScrolling = true;
         scroll();
         
-        // Stop auto-scroll on user interaction
-        const stopScroll = () => {
-            isAutoScrolling = false;
-            // Remove listeners once stopped
-            ['mousedown', 'wheel', 'touchstart', 'keydown'].forEach(evt => {
-                window.removeEventListener(evt, stopScroll);
-            });
-        };
-
-        ['mousedown', 'wheel', 'touchstart', 'keydown'].forEach(evt => {
-            window.addEventListener(evt, stopScroll, { passive: true });
-        });
+        // Continuous auto-scroll (removed stopScroll to keep it playing as requested)
     }
 
     // Scroll Animations
