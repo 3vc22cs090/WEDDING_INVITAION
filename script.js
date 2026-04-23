@@ -1,5 +1,7 @@
 // YouTube Iframe API Setup
 var player;
+var hasClicked = false;
+
 function onYouTubeIframeAPIReady() {
     player = new YT.Player('player', {
         height: '0',
@@ -9,8 +11,19 @@ function onYouTubeIframeAPIReady() {
             'autoplay': 0,
             'loop': 1,
             'playlist': 'tqneHIW3b6w'
+        },
+        events: {
+            'onReady': onPlayerReady
         }
     });
+}
+
+function onPlayerReady(event) {
+    if (hasClicked) {
+        event.target.playVideo();
+        event.target.unMute();
+        event.target.setVolume(100);
+    }
 }
 
 // Load YouTube API
@@ -33,9 +46,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const introScreen = document.getElementById('intro-screen');
     const mainContent = document.getElementById('main-content');
     openBtn.addEventListener('click', () => {
+        hasClicked = true;
         // Play YouTube Music
-        if (player && player.playVideo) {
+        if (player && player.playVideo && typeof player.playVideo === 'function') {
             player.playVideo();
+            player.unMute();
+            player.setVolume(100);
         }
 
         // Transition Splash Screen
